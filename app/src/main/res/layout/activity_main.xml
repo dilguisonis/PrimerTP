@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:hint="Nombre" />
+
+        <EditText
+            android:id="@+id/apellido"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Apellido" />
+
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/masculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"
+                android:onClick="eligeSexo"/>
+            <RadioButton android:id="@+id/femenino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"
+                android:onClick="eligeSexo"/>
+        </RadioGroup>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/profesor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profesor"
+                android:onClick="eligeProfesion"/>
+            <RadioButton android:id="@+id/alumno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alumno"
+                android:onClick="eligeProfesion"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/materia"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:hint="Materia" />
+
+        <EditText
+            android:id="@+id/curso"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:hint="Curso" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnImprimir"
+            android:text="Imprimir"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnAgregarPersona"
+            android:text="Agregar Persona"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnProcesarPersonas"
+            android:text="Procesar Personas  "/>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/NombreMasLargo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre más largo"
+                android:onClick="eligeProceso"/>
+            <RadioButton android:id="@+id/NombreConMasA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='Nombre con más "A"'
+                android:onClick="eligeProceso"/>
+        </RadioGroup>
+    </LinearLayout>
+</FrameLayout>
